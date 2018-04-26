@@ -1,0 +1,16 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Lanchonete Pituba</title>
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <h1>Pedidos</h1>
+        
+        <nav id="menu">
+            <ul>
+                <li><a href="index.html" class="utils">Home</a></li>
+            </ul>
+        </nav>
