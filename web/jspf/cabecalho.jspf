@@ -14,5 +14,6 @@
                 <li><a href="index.html" class="utils">Home</a></li>
                 <li><a href="mesa.html" class="utils">Mesa</a></li>
                 <li><a href="produto.html" class="utils">Produto</a></li>
+                <li><a href="pedidos.html" class="utils">Pedidos Fechados</a></li>
             </ul>
         </nav>

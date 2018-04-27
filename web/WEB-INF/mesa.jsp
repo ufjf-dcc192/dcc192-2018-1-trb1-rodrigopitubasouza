@@ -26,13 +26,13 @@
                     
                         <tr>
                             <td><%=mesas.getDescricao()%></td>
-                            <%if(mesas.isAberta()){%><td>Aberta</td><%}else{%><td><a href="abrirMesa.html?id=<%=mesas.getCodigo()%>">Abrir Mesa</a></td><%}%>            
+                            <%if(mesas.isAberta()){%><td>Aberta</td><%}else{%><td><a href="abrirMesa.html?id=<%=mesas.getCodigo()-1%>">Abrir Mesa</a></td><%}%>            
                         </tr>
                     <%
                         i++;
                     }            
                     %>  
-                    <tr><td><a href="novaMesa.html?id=-1">Nova Mesa</a></td></tr>
+                    <tr><td><a href="novaMesa.html?id=">Nova Mesa</a></td></tr>
                 </tbody>
             </table>
         </div>
