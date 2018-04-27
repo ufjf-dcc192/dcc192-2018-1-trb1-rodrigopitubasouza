@@ -16,7 +16,6 @@ import ListagemInicial.ListaProdutoPedido;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 import javax.servlet.RequestDispatcher;
@@ -61,7 +60,7 @@ public class LanchoneteServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         if ("/abrirMesa.html".equals(request.getServletPath())) {
             String cliente = request.getParameter("cliente");
-            String numero = String.valueOf(ListaPedido.getInstance().size() + 1);
+            String numero = String.valueOf(ListaPedido.getInstance().size() + 1 + pedidosfechados.size());
             Date dt = new Date();
             SimpleDateFormat formatador = new SimpleDateFormat("dd/MM/yyyy - HH:mm");
             String data = formatador.format(dt);
@@ -100,6 +99,7 @@ public class LanchoneteServlet extends HttpServlet {
             
             }
             response.sendRedirect("inserir.html?id=" + request.getParameter("id"));
+       
         }
     }
 

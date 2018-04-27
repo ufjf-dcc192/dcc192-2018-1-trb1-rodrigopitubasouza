@@ -21,7 +21,7 @@
     <tbody>
        <%
                 List<Pedido> p = (List<Pedido>) request.getAttribute("pedidos");
-                                
+                double vTotal = 0;         
                 for(int j = 0; j < p.size(); j++) {
             %>
             <tr>
@@ -34,9 +34,10 @@
                 
             </tr>
             <%
-                   
+                  vTotal = vTotal + p.get(j).getTotal();  
                 }            
             %> 
     </tbody>
 </table>
+    <h1>Valor Total em Caixa: <%=vTotal%></h1>
     <%@include file="../jspf/footer.jspf" %>

@@ -1,4 +1,8 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+
+<link rel="stylesheet" href="css/style.css">
+
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -7,13 +11,16 @@
         
     </head>
     <body>
-        <h1>Lanchonete Pituba</h1>
-        
-        <nav id="menu">
+        <header>
+        <h1 class = "index">Lanchonete Pituba</h1>
+        </header>
+        <aside>
+        <menu>
             <ul>
                 <li><a href="index.html" class="utils">Home</a></li>
                 <li><a href="mesa.html" class="utils">Mesa</a></li>
                 <li><a href="produto.html" class="utils">Produto</a></li>
                 <li><a href="pedidos.html" class="utils">Pedidos Fechados</a></li>
             </ul>
-        </nav>
+        </menu>
+        </aside>

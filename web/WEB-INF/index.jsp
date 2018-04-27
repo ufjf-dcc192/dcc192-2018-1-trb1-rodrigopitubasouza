@@ -8,12 +8,14 @@
 <%@page import="java.util.List"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@include file="../jspf/cabecalho.jspf" %>
+<h2>Pedidos </h2>
 <div>
     <table>
         <thead> 
             <th>Mesa</th>
             <th>Cliente</th>
             <th>Total</th>
+            <th>Opções</th>
         </thead> 
         <tbody>
             <%
@@ -24,7 +26,7 @@
                 <td><%=pedidos.getMesa().getDescricao()%></td>
                 <td><%=pedidos.getCliente()%></td>
                 <td><%=pedidos.getTotal()%></td>
-                <td><a href="index.html?id=<%=i%>">Exibir </a><a href="inserir.html?id=<%=i%>">Inserir </a><a href="fechar.html?id=<%=i%>" class="delete">Fechar </a></td>  
+                <td class="limpa" width ="20%"><a href="index.html?id=<%=i%>">Exibir </a><a href="inserir.html?id=<%=i%>">Inserir </a><a href="fechar.html?id=<%=i%>" class="delete">Fechar </a></td>  
             </tr>
             <%
                 i++;
@@ -72,7 +74,7 @@
                 <td></td>                
                 <td><b>Total Geral Mesa: </b></td>
                 <td><b>R$ <%=vTotal %></b></td>
-                <td></td>
+               
             </tr>
             
                 <tbody>

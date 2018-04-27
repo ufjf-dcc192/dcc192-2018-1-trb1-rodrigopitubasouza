@@ -6,10 +6,8 @@
 package ListagemInicial;
 
 import Classes.Pedido;
-import Classes.ProdutoPedido;
 import java.util.ArrayList;
 import java.util.List;
-import javax.swing.JOptionPane;
 
 /**
  *

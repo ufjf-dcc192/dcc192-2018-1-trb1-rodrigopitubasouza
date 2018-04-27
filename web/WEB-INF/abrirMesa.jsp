@@ -12,9 +12,10 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@include file="../jspf/cabecalho.jspf" %>
 <div>
+    <h2><label>Abrir Pedido</label> <br></h2>
     <h3>
-        Abrir Pedido
-        <%Mesas mesa = (Mesas) request.getAttribute("mesa");%>
+        
+        <label><%Mesas mesa = (Mesas) request.getAttribute("mesa");%></label>
         <label>Mesa: <%=mesa.getDescricao() %> </label>
     </h3>
     <form method="post">
@@ -22,5 +23,5 @@
  
         <input type="submit" value="Abrir Pedido" />  
     </form>
-
 <%@include file="../jspf/footer.jspf" %>
+</div>

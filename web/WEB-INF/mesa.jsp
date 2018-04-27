@@ -9,13 +9,13 @@
 <%@page import="Classes.Mesas"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@include file="../jspf/cabecalho.jspf" %>
-<h3>Lista de Mesas</h3>
+<h2>Lista de Mesas</h2>
         <div>
             <table>
                 <thead>    
                     
                     <th>Descrição</th>
-                    <th>Status</th>
+                    <th width = "10%">Status</th>
                     
                 </thead>
                 <tbody>

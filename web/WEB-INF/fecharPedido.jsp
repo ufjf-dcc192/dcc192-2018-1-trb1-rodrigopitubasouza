@@ -12,12 +12,14 @@
                 
                 
             %>
+            <h2><label>Pedido do Cliente <%=p.getCliente()%> Fechado</label></h2>
+            <h3><label>Horário de Fechamento : <%=p.getFechamento()%> Total a Pagar : R$ <%=p.getTotal()%></label></h3>
             <h4> 
                 <label>Pedido: <%=p.getNumero() %> </label> <br>
                 <label>Data / Hora:  <%=p.getData() %> </label> <br>
                 <label>Mesa: <%=p.getMesa().getDescricao() %> </label> <br>
                 <label>Cliente : <%=p.getCliente() %> </label> <br>
-                <label>Horário de Fechamento : <%=p.getFechamento()%> Total a Pagar : R$ <%=p.getTotal()%></label>
+                
             </h4>
             <table>
                 <thead>
@@ -48,7 +50,7 @@
                 <td></td>                
                 <td><b>Total Geral Mesa: </b></td>
                 <td><b>R$ <%=vTotal %></b></td>
-                <td></td>
+                
             </tr>
             
                 <tbody>

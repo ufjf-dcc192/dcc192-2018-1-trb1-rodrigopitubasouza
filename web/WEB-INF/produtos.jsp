@@ -8,13 +8,13 @@
 <%@page import="java.util.List"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@include file="../jspf/cabecalho.jspf" %>
-<h3>Lista de Produtos</h3>
+<h2>Lista de Produtos</h2>
         <div>
             <table>
                 <thead>    
                     
                     <th>Descrição</th>
-                    <th>Status</th>
+                    <th>Preço</th>
                     
                 </thead>
                 <tbody>
@@ -24,7 +24,7 @@
                     
                         <tr>
                             <td><%=produtos.getNome()%></td>
-                            <td><%=produtos.getPreco()%></td>                         
+                            <td width = "15%">R$ <%=produtos.getPreco()%></td>                         
                         </tr>
                     <%
                     }            
@@ -33,3 +33,4 @@
                 </tbody>
             </table>
         </div>
+                    <%@include file="../jspf/footer.jspf" %>
