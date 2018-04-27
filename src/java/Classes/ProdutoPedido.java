@@ -67,9 +67,6 @@ public class ProdutoPedido {
         this.valorTotal = valorTotal;
     }
     
-     @Override
-    public String toString() {
-        return  numPedido.getNumero() + " - " + numProduto.getNome()+ " | " + quantidade + " * " + valorUni + " = " + valorTotal;
-    }
+    
     
 }

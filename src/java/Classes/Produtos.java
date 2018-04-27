@@ -39,7 +39,7 @@ public class Produtos {
 
     @Override
     public String toString() {
-        return nome +","+preco;
+        return nome +" - R$ "+preco;
     }
     
     

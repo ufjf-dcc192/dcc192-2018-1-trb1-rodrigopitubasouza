@@ -1,40 +1,19 @@
 <%-- 
-    Document   : index
-    Created on : 26/04/2018, 14:39:16
+    Document   : inserirPedido
+    Created on : 26/04/2018, 23:58:11
     Author     : rodri
 --%>
 
 <%@page import="Classes.Pedido"%>
+<%@page import="Classes.Produtos"%>
 <%@page import="java.util.List"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@include file="../jspf/cabecalho.jspf" %>
-<div>
-    <table>
-        <thead> 
-            <th>Mesa</th>
-            <th>Cliente</th>
-            <th>Total</th>
-        </thead> 
-        <tbody>
-            <%
-                int i = 0;
-                for (Pedido pedidos : (List<Pedido>) request.getAttribute("pedidos")) {
-            %>
-            <tr>
-                <td><%=pedidos.getMesa().getDescricao()%></td>
-                <td><%=pedidos.getCliente()%></td>
-                <td><%=pedidos.getTotal()%></td>
-                <td><a href="index.html?id=<%=i%>">Exibir </a><a href="inserir.html?id=<%=i%>">Inserir </a><a href="fechar.html?id=<%=i%>" class="delete">Fechar </a></td>  
-            </tr>
-            <%
-                i++;
-                }
-            %>   
-        </tbody>
-    </table>
-            <%
-                Pedido p = (Pedido) request.getAttribute("mesaExibida");
-                if(p != null){
+    <h3>Inserir Produtos</h3>
+    <%
+                Pedido p = (Pedido) request.getAttribute("pedidos");
+                
                 
             %>
             <h4> 
@@ -43,6 +22,19 @@
                 <label>Mesa: <%=p.getMesa().getDescricao() %> </label> <br>
                 <label>Cliente : <%=p.getCliente() %> </label> <br>
             </h4>
+    <form method="post">
+        <label>Produtos: 
+            <select name ="produtos" >
+                <c:forEach var="prod" items="${produtos}">                
+                    <option value="${prod}">${prod}</option>  
+                </c:forEach>
+            </select>
+        </label>
+        <label>Quantidade: <input type="text" value="0" name="quantidade"></label>
+        <input type="submit" value="Inserir">
+    </form>
+                </table>
+            
             <table>
                 <thead>
                     <th>Produto</th>
@@ -61,7 +53,7 @@
                 <td><%=p.getProdPedido().get(j).getQuantidade() %></td>
                 <td>R$ <%=p.getProdPedido().get(j).getValorUni() %></td>
                 <td>R$ <%=p.getProdPedido().get(j).getValorTotal() %></td>
-                
+                <td><a href="inserir.html?id=<%=request.getParameter("id")%>&prod=<%=j%>">Remover</a></td>
             </tr>
             <%
                     vTotal = vTotal + p.getProdPedido().get(j).getValorTotal();
@@ -77,7 +69,5 @@
             
                 <tbody>
             </table>
-            <%}%>
-            
-</div>
+           
 <%@include file="../jspf/footer.jspf" %>
