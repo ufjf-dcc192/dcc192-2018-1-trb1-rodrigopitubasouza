@@ -31,7 +31,7 @@
                 </c:forEach>
             </select>
         </label>
-        <label>Quantidade: <input type="text" value="0" name="quantidade"></label>
+        <label>Quantidade: <input type="number" value="0" min="1" name="quantidade"/></label>
         <input type="submit" value="Inserir">
     </form>
 </table>

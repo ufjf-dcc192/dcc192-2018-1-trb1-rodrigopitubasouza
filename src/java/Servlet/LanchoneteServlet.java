@@ -69,11 +69,17 @@ public class LanchoneteServlet extends HttpServlet {
             ListaPedido.getInstance().add(new Pedido(numero, data, m, cliente, "", 0.00));
             response.sendRedirect("index.html");
         } else if ("/novaMesa.html".equals(request.getServletPath())) {
+            if(!request.getParameter("nomeMesa").equals("")){
             ListaMesas.getInstance().add(new Mesas(ListaMesas.getInstance().size()+1, request.getParameter("nomeMesa")));
             response.sendRedirect("mesa.html");
+            }else
+                response.sendRedirect("novaMesa.html");
         } else if ("/novoProduto.html".equals(request.getServletPath())) {
+            if(!request.getParameter("nomeProduto").equals("")){
             ListaProduto.getInstance().add(new Produtos(request.getParameter("nomeProduto"), Double.parseDouble(request.getParameter("precoProduto"))));
             response.sendRedirect("produto.html");
+            }else
+            response.sendRedirect("novoProduto.html");
         } else if ("/inserir.html".equals(request.getServletPath())) {
             if (Integer.parseInt(request.getParameter("quantidade")) > 0) {
                 String produto;
