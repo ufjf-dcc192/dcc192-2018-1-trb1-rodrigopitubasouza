@@ -10,8 +10,9 @@ package Classes;
  * @author rodri
  */
 public class Mesas {
-        private int codigo;
+    private int codigo;
     private String descricao;
+    private boolean aberta;
 
     public Mesas() {
     }
@@ -19,8 +20,18 @@ public class Mesas {
     public Mesas(int codigo, String descricao) {
         this.codigo = codigo;
         this.descricao = descricao;
+        aberta = false;
     }
 
+    public boolean isAberta() {
+        return aberta;
+    }
+
+    public void setAberta(boolean aberta) {
+        this.aberta = aberta;
+    }
+    
+    
     public int getCodigo() {
         return codigo;
     }
@@ -39,6 +50,6 @@ public class Mesas {
 
     @Override
     public String toString() {
-        return codigo + " - " + descricao;
+        return descricao;
     }
 }

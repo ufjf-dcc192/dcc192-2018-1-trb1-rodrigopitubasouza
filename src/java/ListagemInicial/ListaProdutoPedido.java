@@ -8,6 +8,7 @@ package ListagemInicial;
 import Classes.ProdutoPedido;
 import java.util.ArrayList;
 import java.util.List;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -27,7 +28,8 @@ public class ListaProdutoPedido {
             
             prodPedido.add(new ProdutoPedido(ListaPedido.getInstance().get(2), ListaProduto.getInstance().get(2), 1, ListaProduto.getInstance().get(4).getPreco(), ListaProduto.getInstance().get(4).getPreco() * 1));                  
             prodPedido.add(new ProdutoPedido(ListaPedido.getInstance().get(2), ListaProduto.getInstance().get(3), 4, ListaProduto.getInstance().get(2).getPreco(), ListaProduto.getInstance().get(2).getPreco() * 4));                  
-       }
+            
+        }
         return prodPedido;
     }
 }

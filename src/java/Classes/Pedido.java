@@ -5,6 +5,7 @@
  */
 package Classes;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -27,6 +28,7 @@ public class Pedido {
         this.cliente = cliente;
         this.fechamento = fechamento;
         this.total = total;
+        this.prodPedido = new ArrayList<>();
     }
 
     public Pedido() {

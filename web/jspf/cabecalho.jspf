@@ -4,7 +4,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Lanchonete Pituba</title>
-        <link rel="stylesheet" href="css/main.css">
+        
     </head>
     <body>
         <h1>Pedidos</h1>
@@ -12,5 +12,7 @@
         <nav id="menu">
             <ul>
                 <li><a href="index.html" class="utils">Home</a></li>
+                <li><a href="mesa.html" class="utils">Mesa</a></li>
+                <li><a href="produto.html" class="utils">Produto</a></li>
             </ul>
         </nav>
