@@ -39,4 +39,4 @@ Foi díficil implentar a janela index, a qual chamava ela mesmo  quando o client
 
 # Modelo:
 https://drive.google.com/file/d/11uC4G2VEm1W6vLGkgOH66Yu7iCDyXG1G/view?usp=sharing
-Foi utilizado também uma lista para cada classe.
+Foi utilizado também uma listagem inicial para cada classe.
