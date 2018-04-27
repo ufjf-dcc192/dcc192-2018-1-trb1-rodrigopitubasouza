@@ -4,14 +4,23 @@
     Author     : rodri
 --%>
 
+<%@page import="ListagemInicial.ListaProduto"%>
+<%@page import="ListagemInicial.ListaMesas"%>
+<%@page import="Classes.Produtos"%>
+<%@page import="java.util.List"%>
+<%@page import="Classes.Mesas"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
-    </head>
-    <body>
-        <h1>Hello World!</h1>
-    </body>
-</html>
+<%@include file="../jspf/cabecalho.jspf" %>
+<div>
+    <h3>
+        Abrir Pedido
+        <%Mesas mesa = (Mesas) request.getAttribute("mesa");%>
+        <label>Mesa: <%=mesa.getDescricao() %> </label>
+    </h3>
+    <form method="post">
+        <label>Cliente: <input type="text" name="cliente" value="" /> </label>
+ 
+        <input type="submit" value="Abrir Pedido" />  
+    </form>
+
+<%@include file="../jspf/footer.jspf" %>
